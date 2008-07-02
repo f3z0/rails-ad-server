@@ -1,0 +1,28 @@
+8
+
+dir
+634
+https://wush.net/svn/designwin/oem.com/vendor/plugins/rads/tasks
+https://wush.net/svn/designwin
+
+
+
+2008-05-21T20:16:43.279433Z
+506
+designwin
+
+
+svn:special svn:externals svn:needs-lock
+
+rads_tasks.rake
+file
+
+
+
+
+2008-05-19T14:25:56.000000Z
+377ce9776b18fa6adab92aa2340225be
+2008-05-21T20:16:43.279433Z
+506
+designwin
+
