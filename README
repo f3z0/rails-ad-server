@@ -3,7 +3,7 @@ RAdS - Rails Ad Server
 
 Installation:
 1) Make sure rads_controller is not in use (including app/views/rads), if it is then you will need to remove it or hack this plugin to use some other naming schema.
-2) Install the plugin to your app: ./script/plugin install git://github.com/coolblade/rails-ad-server.git
+2) Install the plugin to your app: ./script/plugin install http://github.com/coolblade/rails-ad-server.git
 3) Generate rads_controller: ruby script/generate rads_gen rads
 4) Create the required tables (migration generated in step 3): rake db:migrate
 5) Configure the RAdS server in your database. 
