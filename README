@@ -1,13 +1,29 @@
-Rads
+RAdS - Rails Ad Server
 ====
 
-Introduction goes here.
+Installation:
+1) Make sure rads_controller is not in use (including app/views/rads), if it is then you will need to remove it or hack this plugin to use some other naming schema.
+2) Install the plugin to your app: ./script/plugin install git://github.com/coolblade/rails-ad-server.git
+3) Generate rads_controller: ruby script/generate rads_gen rads
+4) Create the required tables (migration generated in step 3): rake db:migrate
+5) Configure the RAdS server in your database. 
+	-Make Sure to include atleast one banner type in rads_banner_types and the CPM (cost per 1000 impressions). Example: (name => "skyscraper, cpm => 125)
+	-Add a Campaign to rads_campaigns with the name and the budget of the campaign
+	-Add a banner into rads_banners, include a url to the location of the banner in the image field (or use html to overide and display whatever html you want), include the campaign_id that was created in the last step, and then the url the banner should link to (note if you use html instead of image field then you will need to link it yourself in the html field)
+
+You can then use show_rads_banner :type throughout your project and it will randomly display the banners from your database.
+
+If you need to display impressions and clicks from a particular campaign you can use the view helper: show_rads_panel(campaign_id)
+
+I apologize in advance as this is still a work in progress, would like to eventually create a admin panel for setting up the campaigns and banners outside of the database.
+
+If you have any problems or would like to contribute email me at gregory.james.ray@gmail.com
 
 
 Example
 =======
 
-Example goes here.
+<%= show_rads_banner :skyscraper %>
 
 
 Copyright (c) 2008 [name of plugin creator], released under the MIT license
