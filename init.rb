@@ -1,2 +1,2 @@
-ActionView::Base.send :include, Rads::ViewHelpers
-ActionController::Base.send :include, Rads::ControllerHelpers
+ActionView::Base.send :include, ActionView::Acts::Rads
+ActionController::Base.send :include, ActionController::Acts::Rads
