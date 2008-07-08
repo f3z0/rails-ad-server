@@ -1,8 +1,5 @@
 module Rads
-  module ViewHelpers
-    def self.included(base)
-      base.extend(ClassMethods)
-    end
+  class ViewHelpers
   
     def rads_url(banner_id)
       banner = RadsBanner.find(banner_id)
