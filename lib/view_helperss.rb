@@ -1,4 +1,4 @@
-  module ViewHelpers    
+  module ViewHelperss    
     def show_rads_banner(banner_type)
       banner_type = RadsBannerType.find_by_name(banner_type.to_s)
       if banner_type

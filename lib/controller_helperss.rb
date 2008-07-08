@@ -1,4 +1,4 @@
-  module ControllerHelpers
+  module ControllerHelperss
     def rads_url(banner_id)
       banner = RadsBanner.find(banner_id)
       banner.rads_banner_stats[0].clicks += 1
