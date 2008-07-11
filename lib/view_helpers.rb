@@ -28,7 +28,7 @@ module ViewHelpers
       unless campaign.nil?
         banner = campaign.banner(banner_type.id)
         if banner and banner.image
-          return link_to(image_tag(banner.image), :controller => "rads", :action => "rads_click_to", :id => banner.id)
+          return link_to(image_tag(banner.image), :controller => "/rads", :action => "rads_click_to", :id => banner.id)
         elsif banner and banner.html
           return banner.html
         end
